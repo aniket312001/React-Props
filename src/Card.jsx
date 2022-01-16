@@ -6,7 +6,7 @@ function Card(props) {
         <>
             <img src={props.imgSrc} alt="check internet" />
             <h2>Title - {props.title}</h2>
-            <p>Orignal Webseries</p>
+            <p>{props.description}</p>
             <a href={props.link} target="_blank">Click Here</a>
         </>
     )
