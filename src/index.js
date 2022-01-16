@@ -12,7 +12,10 @@ import reportWebVitals from './reportWebVitals';
 function ncard(val,index){
       return (
             console.log(index),
+
+
             <Card imgSrc={val.imgSrc} 
+            key={val.id}   // for removinf the warning 
             title={val.title}
             link={val.link} 
             description = {val.description}      
