@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
 import './index.css';
+import App from './App'
+import ReactHook from './ReactHook'
+import Form from './Form'
 
 import data from './data.json'
 
@@ -10,10 +13,10 @@ import reportWebVitals from './reportWebVitals';
 
 
 function ncard(val,index){
+    if(val.title !=='Game Of Throne') {
+
       return (
             console.log(index),
-
-
             <Card imgSrc={val.imgSrc} 
             key={val.id}   // for removinf the warning 
             title={val.title}
@@ -21,17 +24,17 @@ function ncard(val,index){
             description = {val.description}      
         />
       )
+    }
 }
 
 
 ReactDOM.render(
   <>
-   
-   
 
    {data.map(ncard)}
-    
-    
+    <App/>    
+    <ReactHook />
+    <Form />
   </>
   ,document.getElementById('root')
 );
